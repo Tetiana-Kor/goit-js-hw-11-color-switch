@@ -28,12 +28,14 @@ function onOpenBtnClick() {
 
   intervalId = setInterval(onChangeColor, DELAY);
   isActive = true;
+  refs.startBtn.disabled = true;
 }
 
 // Зупинка
 function onCloseBtnClick() {
   isActive = false;
   clearInterval(intervalId);
+  refs.startBtn.disabled = false;
 }
 
 // Зміна кольору бекграунду
